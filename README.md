@@ -6,6 +6,7 @@ An independent medical consultation workspace forked from [Handy](https://github
 
 Consult preserves Handy's local speech recognition engine and adds a clinical workspace with encrypted encounter storage, referral text import, editable notes and letters, two-stage local Ollama drafting, explicit review/filing states, and manual document transfer. Optional OpenMed integration provides a local de-identification preview.
 
+- [Start here: opening the app](docs/START_HERE.md)
 - [Development and setup](docs/DEVELOPMENT.md)
 - [Scope, architecture and roadmap](docs/CLINICAL_ROADMAP.md)
 - [Upstream Handy documentation](docs/HANDY_UPSTREAM.md)
