@@ -780,13 +780,18 @@ pub fn run(cli_args: CliArgs) {
             managers::transcription::StreamPhaseEvent,
         ]);
 
-    #[cfg(debug_assertions)] // <- Only export on non-release builds
-    specta_builder
-        .export(
+    // Packaged debug apps must not write source files during startup. Finder
+    // supplies an unrelated working directory, which previously caused a panic.
+    #[cfg(debug_assertions)]
+    if std::env::var_os("CONSULT_EXPORT_BINDINGS").is_some() {
+        let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../src/bindings.ts");
+        if let Err(error) = specta_builder.export(
             Typescript::default().bigint(BigIntExportBehavior::Number),
-            "../src/bindings.ts",
-        )
-        .expect("Failed to export typescript bindings");
+            path,
+        ) {
+            log::warn!("Could not export development bindings: {error}");
+        }
+    }
 
     let invoke_handler = specta_builder.invoke_handler();
 

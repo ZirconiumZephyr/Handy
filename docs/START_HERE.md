@@ -3,7 +3,7 @@
 ## The easy way
 
 1. In Finder, open `/Users/jamesthomas/Projects/medical-letters/Handy`.
-2. Double-click **Start Consult.command**. A Terminal window may appear briefly. It launches Consult with its Dock icon available.
+2. Double-click **Start Consult.command**. A Terminal window may appear briefly. It launches the exact Consult application and keeps its Dock icon available. If startup fails, it shows the error instead of silently reporting success.
 3. Look for a window titled **Consult**. If it is behind another window, click the teal pulse icon in the Dock.
 
 You can also open the app directly: Finder → the project folder → `src-tauri` → `target` → `debug` → `bundle` → `macos` → **Consult.app**.
@@ -35,7 +35,8 @@ OpenMed is also an optional separately configured local service. It is not requi
 
 1. Check the Dock for **Consult** and click it.
 2. Quit Consult with Command-Q if you can see its menu, then run **Start Consult.command** again.
-3. If the launcher reports that the app is missing, rebuild it from the project folder with `npm run tauri -- build --debug --bundles app`.
-4. If macOS displays a security or permission message, read it before proceeding. This is a locally built development app, not a notarised release.
+3. The earlier development build could crash when opened from Finder because it tried to export source files relative to Finder’s working directory. This is fixed in the current build; use the rebuilt app and updated launcher.
+4. If the launcher reports that the app is missing, rebuild it from the project folder with `npm run tauri -- build --debug --bundles app`.
+5. If macOS displays a security or permission message, read it before proceeding. This is a locally built development app, not a notarised release.
 
 Use fictional data while validating this development version. Git backs up source code; **Encrypted backup** inside Consult backs up your local consultation records separately.

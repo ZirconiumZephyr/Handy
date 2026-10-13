@@ -86,3 +86,7 @@ The browser tests exercise encrypted persistence, incorrect-passphrase rejection
 Commit source changes using conventional commit messages and push the development branch to `origin`. Use `upstream` only to fetch original Handy changes. Do not push this clinical fork's changes upstream without a separate decision.
 
 The ignore rules exclude environment secrets, clinical runtime directories, encrypted exports, databases, recordings, Python environments and model weights. Review `git diff --cached` before pushing; ignore rules are not a complete sensitive-data scanner. Use synthetic examples in code, tests, issues and screenshots.
+
+## Development binding generation
+
+Packaged debug apps do not export source bindings during startup. To explicitly regenerate them during development, run `CONSULT_EXPORT_BINDINGS=1 npm run tauri -- dev`. The export uses an absolute source path and failures are nonfatal.
