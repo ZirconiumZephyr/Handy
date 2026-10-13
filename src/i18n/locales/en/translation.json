@@ -16,7 +16,8 @@
     "postProcessing": "Post Process",
     "history": "History",
     "debug": "Debug",
-    "about": "About"
+    "about": "About",
+    "consultations": "Consultations"
   },
   "onboarding": {
     "subtitle": "To get started, choose a transcription model",
@@ -101,7 +102,7 @@
     },
     "permissions": {
       "title": "Permissions Required",
-      "description": "Handy needs a couple of permissions to work properly.",
+      "description": "Consult needs a couple of permissions to work properly.",
       "microphone": {
         "title": "Microphone Access",
         "description": "Required to hear your voice for transcription."
@@ -161,7 +162,7 @@
     "general": {
       "title": "General",
       "shortcut": {
-        "title": "Handy Shortcuts",
+        "title": "Consult Shortcuts",
         "description": "Configure keyboard shortcuts to trigger speech-to-text recording",
         "loading": "Loading shortcuts...",
         "none": "No shortcuts configured",
@@ -225,7 +226,7 @@
       },
       "rescan": {
         "label": "Rescan",
-        "tooltip": "Rescan for models added to the models folder or Hugging Face cache outside Handy"
+        "tooltip": "Rescan for models added to the models folder or Hugging Face cache outside Consult"
       },
       "noModelsMatch": "No models match this filter."
     },
@@ -293,11 +294,11 @@
       },
       "autostart": {
         "label": "Launch on Startup",
-        "description": "Automatically start Handy when you log in to your computer."
+        "description": "Automatically start Consult when you log in to your computer."
       },
       "showTrayIcon": {
         "label": "Show Tray Icon",
-        "description": "Display the Handy icon in the system tray."
+        "description": "Display the Consult icon in the system tray."
       },
       "overlay": {
         "style": {
@@ -511,7 +512,7 @@
       },
       "updateChecks": {
         "label": "Check for Updates",
-        "description": "Automatically check for new versions of Handy",
+        "description": "Automatically check for new versions of Consult",
         "lockedDescription": "Disabled by system configuration (HANDY_DISABLE_UPDATER)"
       },
       "whatsNewPreview": {
@@ -603,7 +604,7 @@
       },
       "keyboardDiagnostic": {
         "title": "Keyboard Diagnostic",
-        "description": "Checks whether keyboard events reach Handy. Only event counts are recorded — never which keys you press.",
+        "description": "Checks whether keyboard events reach Consult. Only event counts are recorded — never which keys you press.",
         "run": "Run 10s diagnostic",
         "running": "Listening… press your shortcut a few times (e.g. Option+Space)",
         "secureInputLabel": "Secure Input",
@@ -617,7 +618,7 @@
         "mouse": "Mouse",
         "verdictBlocked": "Secure Input is blocking key events — keyed shortcuts cannot work until it is resolved.",
         "verdictSuspicious": "Modifier events arrived but no key events — something is suppressing keys even though Secure Input reports disabled. Please report this on GitHub.",
-        "verdictOk": "Key events are reaching Handy normally.",
+        "verdictOk": "Key events are reaching Consult normally.",
         "verdictNoEvents": "No events captured — did you press any keys during the test?",
         "failed": "Diagnostic failed: {{error}}"
       }
@@ -626,15 +627,15 @@
       "title": "About",
       "version": {
         "title": "Version",
-        "description": "Current version of Handy"
+        "description": "Current version of Consult"
       },
       "whatsNewUpdates": {
         "label": "Show What's New",
-        "description": "Show release notes after Handy updates"
+        "description": "Show release notes after Consult updates"
       },
       "appDataDirectory": {
         "title": "App Data Directory",
-        "description": "Location where Handy stores its data"
+        "description": "Location where Consult stores its data"
       },
       "sourceCode": {
         "title": "Source Code",
@@ -642,16 +643,16 @@
         "button": "View on GitHub"
       },
       "supportDevelopment": {
-        "title": "Support Development",
-        "description": "Help us continue building Handy",
-        "button": "Donate"
+        "title": "Upstream Handy project",
+        "description": "Consult is an independent fork. You can support the original Handy developers.",
+        "button": "Support Handy"
       },
       "acknowledgments": {
         "title": "Acknowledgments",
         "ggml": {
           "title": "ggml",
           "description": "High-performance tensor library for on-device machine learning inference",
-          "details": "Handy's local speech-to-text is built on transcribe.cpp and ggml. Thanks to the amazing work by Georgi Gerganov and contributors."
+          "details": "Consult's local speech-to-text is built on transcribe.cpp and ggml. Thanks to the amazing work by Georgi Gerganov and contributors."
         }
       }
     }
@@ -672,7 +673,7 @@
     "portableUpdateBrowseButton": "Open GitHub Releases"
   },
   "whatsNew": {
-    "title": "New in Handy v{{version}}"
+    "title": "New in Consult v{{version}}"
   },
   "common": {
     "loading": "Loading...",
@@ -684,7 +685,7 @@
     "noOptionsFound": "No options found"
   },
   "accessibility": {
-    "permissionsDescription": "Handy needs accessibility permissions to type transcribed text.",
+    "permissionsDescription": "Consult needs accessibility permissions to type transcribed text.",
     "openSettings": "Open System Settings"
   },
   "errors": {
@@ -707,11 +708,11 @@
   },
   "appLanguage": {
     "title": "Application Language",
-    "description": "Change the language of the Handy interface"
+    "description": "Change the language of the Consult interface"
   },
   "theme": {
     "title": "Application Theme",
-    "description": "Choose whether Handy follows your system theme or stays light or dark",
+    "description": "Choose whether Consult follows your system theme or stays light or dark",
     "options": {
       "system": "System",
       "light": "Light",
@@ -733,5 +734,80 @@
     "learnMore": "How to fix",
     "recorderBlocked": "Can't record shortcuts right now — macOS Secure Input is blocking key events. Resolve the Secure Input warning first.",
     "dismiss": "Dismiss"
+  },
+  "clinical": {
+    "brand": "Consult",
+    "tagline": "Your clinical consultation workspace",
+    "unlockTitle": "Unlock your workspace",
+    "vaultHelp": "Create or enter a passphrase of at least 12 characters. Records are encrypted on this device. Keep your passphrase safe: it cannot be recovered.",
+    "passphrase": "Workspace passphrase",
+    "unlock": "Unlock / create workspace",
+    "unlockFailed": "Unable to unlock. Check the passphrase (at least 12 characters) and the saved vault.",
+    "prototype": "Development build · Validate with synthetic consultations before clinical use.",
+    "consultations": "Consultations",
+    "new": "New consultation",
+    "unnamed": "New patient",
+    "name": "Patient name",
+    "dob": "Date of birth",
+    "patientId": "Patient identifier",
+    "date": "Consultation date",
+    "consent": "Patient consent to recording and AI documentation obtained",
+    "record": "Record consultation",
+    "stop": "Stop recording",
+    "processing": "Processing transcription…",
+    "starting": "Starting microphone…",
+    "identityRequired": "Enter the patient name, DOB and identifier, then confirm consent before recording.",
+    "sources": "Consultation sources",
+    "referral": "Referral / previous correspondence",
+    "referralHelp": "Paste referral text here. PDF import is planned.",
+    "transcript": "Consultation transcript",
+    "additions": "Examination, assessment and clinician additions",
+    "localModel": "Installed Ollama model",
+    "modelHelp": "Exact installed local model name",
+    "localHelp": "Drafts use Ollama at 127.0.0.1:11434. Configure Ollama for local-only operation. No cloud fallback.",
+    "generate": "Generate note and letter",
+    "generating": "Generating drafts locally…",
+    "sourceRequired": "Add a transcript and the name of an installed local model.",
+    "generateFailed": "Draft generation failed. Check Ollama, the installed model and its JSON output. Existing drafts were preserved.",
+    "generated": "Drafts ready. Review against the source before filing.",
+    "invalidDraft": "The model returned an invalid draft.",
+    "letter": "Letter",
+    "note": "Clinical note",
+    "reviewHelp": "Check medications, negation, findings, assessment and plan against the sources. Edits return the encounter to draft.",
+    "draftHelp": "Generate a draft or write your document here.",
+    "copyFormatted": "Copy formatted",
+    "copyPlain": "Copy plain text",
+    "export": "Export HTML",
+    "copied": "Copied. Confirm the correct patient in Gentu before pasting.",
+    "copyFailed": "Clipboard unavailable. Use plain text or export HTML.",
+    "markReviewed": "Mark reviewed",
+    "markFiled": "Confirm filed in Gentu",
+    "draft": "Draft",
+    "reviewed": "Reviewed",
+    "filed": "Filed",
+    "gentuHelp": "Gentu remains the final patient record. Copying does not mark an encounter as filed.",
+    "empty": "Start a consultation",
+    "emptyHelp": "Create an encounter to record, add a referral and prepare your documents.",
+    "saving": "Saving encrypted records…",
+    "saved": "Encrypted records saved",
+    "saveFailed": "Unable to save encrypted records. Keep the app open and check available storage.",
+    "backup": "Encrypted backup",
+    "lock": "Lock workspace",
+    "desktopRequired": "Recording requires the desktop app.",
+    "unassigned": "Transcription was not assigned. Open and select a consultation before recording.",
+    "passwordLength": "Use at least 12 characters.",
+    "vaultVersion": "Unsupported workspace version.",
+    "noBackup": "No saved workspace.",
+    "downloading": "Downloading…",
+    "downloadCount": "{{count}} downloading…",
+    "restore": "Restore encrypted backup",
+    "restoreHelp": "Enter the backup passphrase to restore. Your current vault is replaced only after successful decryption.",
+    "importText": "Import referral text file",
+    "deidentify": "Preview OpenMed de-identification",
+    "redactionPreview": "De-identification preview",
+    "openmedHelp": "Preview only. Review missed identifiers and indirect identifying details. No cloud transmission.",
+    "openmedFailed": "OpenMed unavailable. Start the local worker described in docs/DEVELOPMENT.md.",
+    "idleLocked": "Workspace locked after 10 minutes of inactivity.",
+    "waitBeforeClose": "Stop recording and wait for transcription, drafting and encrypted saving before closing."
   }
 }

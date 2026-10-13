@@ -651,6 +651,10 @@ pub fn run(cli_args: CliArgs) {
 
     let specta_builder = Builder::<tauri::Wry>::new()
         .commands(collect_commands![
+            commands::clinical::clinical_toggle_recording,
+            commands::clinical::clinical_is_recording,
+            commands::clinical::clinical_generate,
+            commands::clinical::clinical_deidentify,
             shortcut::change_binding,
             shortcut::reset_binding,
             shortcut::change_shortcut_activation_setting,
@@ -946,9 +950,9 @@ pub fn run(cli_args: CliArgs) {
             // for portable mode (redirects WebView2 cache to portable Data dir)
             let mut win_builder =
                 tauri::WebviewWindowBuilder::new(app, "main", tauri::WebviewUrl::App("/".into()))
-                    .title("Handy")
-                    .inner_size(680.0, 570.0)
-                    .min_inner_size(680.0, 570.0)
+                    .title("Consult")
+                    .inner_size(1280.0, 850.0)
+                    .min_inner_size(1000.0, 680.0)
                     .resizable(true)
                     .maximizable(true)
                     .visible(false);

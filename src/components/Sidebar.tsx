@@ -2,7 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Cog, FlaskConical, History, Info, Sparkles, Cpu } from "lucide-react";
 import HandyTextLogo from "./icons/HandyTextLogo";
-import HandyHand from "./icons/HandyHand";
+import { Activity, Stethoscope } from "lucide-react";
+import ConsultationWorkspace from "../clinical/ConsultationWorkspace";
 import { useSettings } from "../hooks/useSettings";
 import {
   GeneralSettings,
@@ -32,9 +33,15 @@ interface SectionConfig {
 }
 
 export const SECTIONS_CONFIG = {
+  consultations: {
+    labelKey: "sidebar.consultations",
+    icon: Stethoscope,
+    component: ConsultationWorkspace,
+    enabled: () => true,
+  },
   general: {
     labelKey: "sidebar.general",
-    icon: HandyHand,
+    icon: Activity,
     component: GeneralSettings,
     enabled: () => true,
   },

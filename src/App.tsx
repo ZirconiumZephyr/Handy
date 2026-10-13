@@ -29,6 +29,7 @@ import { WhatsNewGate } from "./components/whats-new";
 import { useSettings } from "./hooks/useSettings";
 import { useSettingsStore } from "./stores/settingsStore";
 import { commands } from "@/bindings";
+import ConsultationWorkspace from "./clinical/ConsultationWorkspace";
 import { getLanguageDirection, initializeRTL } from "@/lib/utils/rtl";
 
 type OnboardingStep = "accessibility" | "model" | "done";
@@ -60,7 +61,7 @@ function App() {
   // (vs a new user who needs full onboarding including model selection)
   const [isReturningUser, setIsReturningUser] = useState(false);
   const [currentSection, setCurrentSection] =
-    useState<SidebarSection>("general");
+    useState<SidebarSection>("consultations");
   const { settings, updateSetting } = useSettings();
   const direction = getLanguageDirection(i18n.language);
   const refreshAudioDevices = useSettingsStore(
@@ -367,10 +368,25 @@ function App() {
           {/* Scrollable content area */}
           <div className="flex-1 flex flex-col overflow-hidden">
             <div ref={settingsScrollRef} className="flex-1 overflow-y-auto">
-              <div className="flex flex-col items-center p-4 gap-4">
+              <div
+                className={
+                  currentSection === "consultations"
+                    ? "flex flex-col"
+                    : "flex flex-col items-center p-4 gap-4"
+                }
+              >
                 <AccessibilityPermissions />
                 <SecureInputWarning />
-                {renderSettingsContent(currentSection, setOnboardingPreview)}
+                <div
+                  style={{
+                    display:
+                      currentSection === "consultations" ? "block" : "none",
+                  }}
+                >
+                  <ConsultationWorkspace />
+                </div>
+                {currentSection !== "consultations" &&
+                  renderSettingsContent(currentSection, setOnboardingPreview)}
               </div>
             </div>
           </div>

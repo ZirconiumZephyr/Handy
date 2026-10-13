@@ -1,0 +1,240 @@
+.consult {
+  color: #233c46;
+  background: #f3f6f7;
+  min-height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0;
+}
+.consult h1 {
+  font-size: 23px;
+  font-weight: 650;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.consult h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+.consult header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 28px;
+  background: white;
+  border-bottom: 1px solid #dae3e7;
+}
+.consult .brand,
+.consult .header-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.consult .brand svg {
+  color: #176c72;
+  width: 32px;
+  height: 32px;
+}
+.consult span,
+.consult small {
+  font-size: 12px;
+  color: #617983;
+}
+.consult button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #cbd9de;
+  border-radius: 7px;
+  padding: 8px 12px;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+.consult button:hover {
+  background: #e9f1f3;
+}
+.consult button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.consult button.primary,
+.consult button.selected {
+  background: #176c72;
+  color: white;
+  border-color: #176c72;
+}
+.consult button.recording {
+  background: #a4383f;
+  color: white;
+}
+.consult .workspace {
+  display: flex;
+  min-height: 660px;
+}
+.consult aside {
+  width: 225px;
+  flex-shrink: 0;
+  padding: 24px 18px;
+  border-right: 1px solid #dae3e7;
+}
+.consult nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 24px 0;
+}
+.consult nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.consult nav .selected span {
+  color: #d5e9ec;
+}
+.consult .encounter {
+  flex: 1;
+  min-width: 0;
+  padding: 22px;
+}
+.consult label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.consult input:not([type="checkbox"]),
+.consult textarea {
+  width: 100%;
+  color: #233c46;
+  background: white;
+  border: 1px solid #cbd9de;
+  border-radius: 6px;
+  padding: 10px;
+  font: inherit;
+  font-weight: 400;
+  user-select: text;
+}
+.consult input:focus,
+.consult textarea:focus,
+.consult button:focus-visible {
+  outline: 2px solid #4c9ea5;
+  outline-offset: 2px;
+}
+.consult .patient-banner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 18px;
+  background: #e6eef1;
+  border-radius: 10px;
+}
+.consult .record-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+  gap: 16px;
+}
+.consult .record-controls label {
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+}
+.consult .columns {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(300px, 1.15fr);
+  gap: 22px;
+}
+.consult .sources,
+.consult .document {
+  padding: 20px;
+  border: 1px solid #dae3e7;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.consult textarea {
+  min-height: 115px;
+  resize: vertical;
+  line-height: 1.6;
+}
+.consult .document-editor {
+  flex: 1;
+  min-height: 425px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  padding: 22px;
+}
+.consult .tabs,
+.consult .export-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.consult .review-notice {
+  font-size: 12px;
+  color: #846129;
+  background: #fcf7e9;
+  padding: 10px;
+  border-radius: 5px;
+}
+.consult footer {
+  padding: 12px 28px;
+  border-top: 1px solid #dae3e7;
+  background: white;
+  font-size: 12px;
+}
+.consult .empty {
+  flex: 1;
+  padding: 100px 30px;
+  text-align: center;
+}
+.consult .empty svg {
+  margin: 0 auto 18px;
+  color: #176c72;
+}
+.consult.lock-screen {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+}
+.consult .vault-card {
+  max-width: 460px;
+  padding: 35px;
+  margin: 30px;
+  background: white;
+  border: 1px solid #dae3e7;
+  border-radius: 16px;
+}
+.consult .vault-card p {
+  margin: 16px 0;
+  font-size: 14px;
+}
+.consult .vault-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 1000px) {
+  .consult aside {
+    width: 180px;
+  }
+  .consult .columns {
+    grid-template-columns: 1fr;
+  }
+  .consult .patient-banner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .consult .header-actions {
+    flex-wrap: wrap;
+  }
+}
